@@ -1,6 +1,4 @@
-using System;
-
-namespace NetCoreEducation.Models
+namespace NetCoreEducation.ViewModels
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,10 @@
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\bin\Debug\netcoreapp2.0\NetCoreEducation.deps.json
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\bin\Debug\netcoreapp2.0\NetCoreEducation.runtimeconfig.json
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\bin\Debug\netcoreapp2.0\NetCoreEducation.runtimeconfig.dev.json
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\bin\Debug\netcoreapp2.0\NetCoreEducation.dll
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\bin\Debug\netcoreapp2.0\NetCoreEducation.pdb
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.csproj.CoreCompileInputs.cache
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.AssemblyInfoInputs.cache
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.AssemblyInfo.cs
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.dll
+C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.pdb

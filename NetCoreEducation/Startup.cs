@@ -46,9 +46,15 @@ namespace NetCoreEducation
 
             app.UseMvc(routes =>
             {
+                /*
+                    DOGRUDAN VARSAYILAN TANIMLAYABILIRIZ. 
+                    routes.MapRoute(
+                    name: "default",
+                    template: "{controller=About}/{action=Profile}");
+                 */
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Course}/{action=Index}/{id?}");
             });
         }
     }
