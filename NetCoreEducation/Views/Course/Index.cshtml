@@ -2,13 +2,18 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<title>Index</title>
-
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+<br />
 <body>
-    <p>@ViewBag.Greeting  @ViewBag.UserName Nasılsın ?</p>
-    <p>Kursa hosgeldın.</p>
-    <p>
-        <a asp-action="Apply" asp-controller="Course">Başvuru Yap</a>
-    </p>
+    <div class="container m-4">
+        <div class="card mx-auto" style="width: 500px;height: 500px;">
+            <div class="card-header">
+                <p>@ViewBag.Greeting @ViewBag.UserName Nasılsın ?</p>
+                <p>Kursa hoşgeldiniz.</p>
+            </div>
+            <div class="card-body">
+              <a asp-action="Apply" asp-controller="Course" class="btn btn-primary btn-block">Başvuru Yap</a>
+            </div>
+        </div>
+    </div>
 </body>

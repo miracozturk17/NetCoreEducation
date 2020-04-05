@@ -1,7 +1,36 @@
-﻿
+﻿@model IEnumerable<Student>
 @{
     ViewData["Title"] = "List";
 }
-
-<h2>List</h2>
-
+<br />
+<h2>Öğrenci Listesi</h2>
+<div class="card mx-auto" style="width: 500px;height: 500px;">
+    <div class="card-header">
+        <p>Kurs Listesi</p>
+    </div>
+    <div class="card-body">
+        <table>
+            <thead>
+                <tr>
+                    <td>Ad</td>
+                    <td>Soyad</td>
+                    <td>E-Mail</td>
+                    <td>Telefon</td>
+                    <td>Onay ?</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@s.Name</td>
+                        <td>@s.SurName</td>
+                        <td>@s.Email</td>
+                        <td>@s.Phone</td>
+                        <td>@s.Confirm</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

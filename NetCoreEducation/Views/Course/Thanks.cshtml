@@ -1,0 +1,29 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<h3>Merhaba @Model.Name.</h3>
+<br />
+
+<div class="card mx-auto" style="width: 500px;height: 500px;">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        @if (Model.Confirm == true)
+        {
+            <span>
+                Kursa katılmış olduğunuzdan dolayı mutlu olduk.
+            </span>
+            <div>
+                <span>Diğer katılımcıları <a asp-action="List">görüntüle.</a></span>
+            </div>
+        }
+        else
+        {
+            <span>
+                Kursumuz için tekrar düşünmenizi dileriz.
+            </span>
+        }
+    </div>
+</div>

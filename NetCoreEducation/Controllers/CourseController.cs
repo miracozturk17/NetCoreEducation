@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using NetCoreEducation.Model;
+using System.Linq;
 
 namespace NetCoreEducation.Controllers
 {
@@ -25,6 +27,18 @@ namespace NetCoreEducation.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Apply(Student student)
+        {
+            //return "Course/Apply";
+            if (ModelState.IsValid)
+            {
+                Repository.AddStudent(student);
+                return View("Thanks", student);
+            }
+            return View(student);
+        }
+
         // HAKKINDA SAYFASI.
         public IActionResult About()
         {
@@ -36,6 +50,7 @@ namespace NetCoreEducation.Controllers
         public IActionResult List()
         {
             // return "Course/Index";
+
             return View();
         }
 
@@ -47,7 +62,8 @@ namespace NetCoreEducation.Controllers
         public IActionResult Details()
         {
             //return "Course/Details";
-            return View();
+            var students = Repository.Students.Where(s => s.Confirm == true);
+            return View(students);
         }
     }
 }

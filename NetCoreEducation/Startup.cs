@@ -38,6 +38,14 @@ namespace NetCoreEducation
 
             app.UseStaticFiles();
 
+            /* app.UseStaticFiles(); wwwroot KLASORU DISARI ACILIR.
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"node_modules")),
+                RequestPath = "/modules"
+            });
+            */
+
             /*
              UYGULAMAYA GELEN YONLENDIRMELER ICIN VERILECEK ILK CEVAPLARI KURGULAYABILIRIZ.
              DEFAULT ROUTE OLUSTURMAK ICIN app.UseMvcWithDefaultRoute(); KULLANILABILIR.
