@@ -21,6 +21,12 @@ namespace NetCoreEducation.Controllers
             return View();
         }
 
+        public IActionResult ByReleased(int year, int month)
+        {
+            //return "Course/ByReleased";
+            return Content("year:" + year, " month:" + month);
+        }
+
         public IActionResult Apply()
         {
             //return "Course/Apply";
@@ -43,7 +49,7 @@ namespace NetCoreEducation.Controllers
         public IActionResult About()
         {
             //return "Course/Index";
-            return View();
+            return Redirect("www.miracozturk.com");
         }
 
         // COURSE LISTE SAYFASI.
@@ -54,10 +60,7 @@ namespace NetCoreEducation.Controllers
             return View();
         }
 
-        /// <summary>
-        /// BILGILER : NAME - DESCRIPTION - ISPUBLISH - PUBLISHDATE - TEACHER 
-        /// </summary>
-        /// <returns></returns>
+        // BILGILER : NAME - DESCRIPTION - ISPUBLISH - PUBLISHDATE - TEACHER 
         // COURSE DETAY SAYFASI.
         public IActionResult Details()
         {

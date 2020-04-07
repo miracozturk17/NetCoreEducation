@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -60,6 +61,17 @@ namespace NetCoreEducation
                     name: "default",
                     template: "{controller=About}/{action=Profile}");
                  */
+
+                /*
+                 BASITCE BLOG PAYLASIMLARI GIBI VS. ICERIK URL DUZENLEMEMIZIDE KENDIMIZ MODELLEYEBILIRIZ.
+                 */
+                routes.MapRoute(
+                    "ByReleased",
+                    "course/byreleased/{year}/{month}",
+                    new { controller = "Course", action = "ByReleased" },
+                    new { year = @"\d{4}", month = @"\d{2}" }
+                    );
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Course}/{action=Index}/{id?}");
