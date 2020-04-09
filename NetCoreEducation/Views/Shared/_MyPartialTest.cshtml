@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "_MyPartialTest";
+}
+<br/>
+<h3>Kategoriler</h3>
+<div>
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li>
+                <a href="/">@category.CategoryName</a>
+            </li>
+        }
+    </ul>
+</div>

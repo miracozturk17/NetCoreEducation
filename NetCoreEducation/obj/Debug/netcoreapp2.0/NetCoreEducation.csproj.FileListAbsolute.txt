@@ -8,4 +8,3 @@ C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debu
 C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.AssemblyInfo.cs
 C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.dll
 C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.pdb
-C:\Users\MIRACOZTURK\Documents\GitHub\NetCoreEducation\NetCoreEducation\obj\Debug\netcoreapp2.0\NetCoreEducation.csprojAssemblyReference.cache

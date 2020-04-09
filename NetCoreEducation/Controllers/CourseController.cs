@@ -2,6 +2,8 @@
 using System;
 using NetCoreEducation.Model;
 using System.Linq;
+using NetCoreEducation.ViewModels;
+using System.Collections.Generic;
 
 namespace NetCoreEducation.Controllers
 {
@@ -17,8 +19,38 @@ namespace NetCoreEducation.Controllers
             ViewBag.Greeting = saat > 12 ? "Iyı Gunler" : "Gunaydın";
             ViewBag.UserName = "Mırac";
 
+            var categories = new List<Category>()
+            {
+                new Category(){CategoryId = 1,CategoryName = "Matematik"},
+                new Category(){CategoryId = 2,CategoryName = "Fizik"}
+            };
+
+            var course = new Course()
+            {
+                CourseId = 1,
+                Name = "Matematik",
+                CreateDate = DateTime.Now,
+                Description = "Matematiksel Algoritmalar",
+                IsPublish = true,
+                PublishDate = DateTime.Now,
+                TeacherId = 1
+            };
+
+            var student = new Student()
+            {
+                Name = "Miraç",
+                SurName = "ÖZTÜRK",
+                Confirm = true,
+                Phone = "0444444444",
+                Email = "m@gmail.com"
+            };
+
+            var viewModel = new CourseStudentViewModel();
+            viewModel.Courses = course;
+            viewModel.Students = student;
+            viewModel.Categories = categories;
             // ACTION METHOD OBEKLERI.
-            return View();
+            return View(viewModel);
         }
 
         public IActionResult ByReleased(int year, int month)

@@ -1,7 +1,23 @@
-﻿
+﻿@model CourseStudentViewModel
 @{
+    // Layout = null; DIYEREK LAYOUTU INAKTIF EDEBILIRIZ.
     ViewData["Title"] = "Index";
 }
+
+@*
+    YORUM SATIRLARI.    
+*@
+
+@{
+    var className = Model.Students.SurName.Length > 0 ? "popular" : null;
+}
+
+<style>
+    .popular{
+        color : blue;
+        font-weight: 150px;
+    }
+</style>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 <br />
 <body>
@@ -11,8 +27,44 @@
                 <p>@ViewBag.Greeting @ViewBag.UserName Nasılsın ?</p>
                 <p>Kursa hoşgeldiniz.</p>
             </div>
+            <br/>
+            <div class="card-header">
+                <h3>@Model.Courses.Name Kursu</h3>
+                <br /> 
+                <p>
+                    @Model.Courses.Description
+
+                    @if (Model.Courses.IsPublish == true)
+                    {
+                        <span>
+                            "@Model.Courses.PublishDate tarihinde yayınlandı."
+                        </span>
+                    }
+                    else
+                    {
+                        <span>
+                            " henüz yayınlanmadı.";
+                        </span>
+                    }
+                </p>
+            </div>
+            <div class="card-header">
+                <br />
+                <h3 class="@className">Öğrenciler</h3>
+                @if (Model.Students.SurName.Length == 0) // Model.Students.Count OLARAK BAZ ALINMALI.
+                {
+                    <span>
+                        "@Model.Courses.PublishDate tarihinde yayınlandı."
+                    </span>
+                }
+                else
+                {
+                    <p>@Model.Students.Name @Model.Students.SurName @Model.Students.Email @Model.Students.Phone</p>
+                }
+            </div>
+            @Html.Partial("_MyPartialTest",Model.Categories)
             <div class="card-body">
-              <a asp-action="Apply" asp-controller="Course" class="btn btn-primary btn-block">Başvuru Yap</a>
+                <a asp-action="Apply" asp-controller="Course" class="btn btn-primary btn-block">Başvuru Yap</a>
             </div>
         </div>
     </div>
